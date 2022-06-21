@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="./images/logo_uol.png" alt="">
+      <ion-icon name="people"></ion-icon>
+    </header>
+    <main>
+      <div class="joined-chat">
+        <p><span>(09:21:45)</span><strong>João</strong>entra na sala...</p>
+      </div>
+      <div class="everyone-talk">
+        <p><span>(09:21:45)</span><strong>João</strong>para<strong>Todos:</strong>Bom dia</p>
+      </div>
+      <div class="direct-talk">
+        <p><span>(09:21:45)</span><strong>Maria</strong>para<strong>João:</strong>Oi João :)</p>
+      </div>
+      <div class="private-talk">
+        <p><span>(09:21:45)</span><strong>João</strong>reservadamente para<strong>Maria:</strong>Oi gatinha quer tc?</p>
+      </div>
+      <div class="left-chat">
+        <p><span>(09:21:45)</span><strong>Maria</strong>sai da sala...</p>
+      </div>
+    </main>
+    <footer>
+      <input type="text" placeholder="Escreva aqui...">
+      <ion-icon name="paper-plane-outline" onclick="sendMsg()"></ion-icon>
+    </footer>
+  </div>
+
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
