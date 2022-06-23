@@ -1,8 +1,29 @@
+let userName
+
+function joinChat() {
+  userName = prompt('Qual seu nome?')
+
+  const promise = axios.post('https://mock-api.driven.com.br/api/v6/uol/participants', {name: userName})
+  promise.then(startChat)
+  promise.catch(resetPage)
+}
+
 function startChat() {
 
   bringData()
 
   setInterval(bringData, 3000)
+  setInterval(checkIfActive, 5000)
+}
+
+function checkIfActive() {
+  axios.post('https://mock-api.driven.com.br/api/v6/uol/status', {name: userName})
+}
+
+function resetPage() {
+  alert('Este nome de usuário já está em uso, por favor digite outro nome!!')
+
+  window.location.reload();
 }
 
 function bringData() {
@@ -52,4 +73,4 @@ function lastMsg(){
   viewLastMsg.scrollIntoView()
 }
 
-startChat()
+joinChat()
