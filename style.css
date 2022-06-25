@@ -48,22 +48,18 @@ main {
 
 .joined-chat,
 .everyone-talk,
-.direct-talk,
-.private-talk,
-.left-chat {
+.private-talk {
   width: 100%;
   padding: 14px 8px;
   display: flex;
 }
 
-.joined-chat,
-.left-chat {
+.joined-chat {
   background: #DCDCDC;
   border-radius: 2px;
 }
 
-.everyone-talk,
-.direct-talk {
+.everyone-talk {
   background: #FFFFFF;
   border-radius: 2px;
 }
@@ -77,6 +73,7 @@ p {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+  word-break: break-all;
 }
 
 span {
